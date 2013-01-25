@@ -14,4 +14,4 @@ sed -i 's/OPENSHIFT_MYSQL_DB_PORT/'$OPENSHIFT_MYSQL_DB_PORT'/' $settingsfile
 sed -i 's/OPENSHIFT_MYSQL_DB_PASSWORD/'$OPENSHIFT_MYSQL_DB_PASSWORD'/' $settingsfile
 sed -i 's/OPENSHIFT_APP_NAME/'$OPENSHIFT_APP_NAME'/' $settingsfile
 
-chmod 777 $OPENSHIFT_REPO_DIR/php/ -R
+chmod 777 $OPENSHIFT_REPO_DIR/php/avatar/ -R
