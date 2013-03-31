@@ -31,9 +31,9 @@ if($cur_user && $cur_user['flag']>4){
     }else{
         echo ' • <a href="/favorites?act=add&id=',$t_obj['id'],'" title="点击收藏">收藏</a>';
     }
-    if($cur_user['flag']>=99){
-        echo ' &nbsp;&nbsp;&nbsp; • <a href="/admin-edit-post-',$t_obj['id'],'">编辑</a>';
-    }
+          if  (  $cur_user['id']  ==  $t_obj['uid']  ||  $cur_user['flag']>=99  ){
+               echo  '  &nbsp;&nbsp;•  <a  href="/admin-edit-post-',$t_obj['id'],'">编辑</a>';
+       }
 }
 
 
