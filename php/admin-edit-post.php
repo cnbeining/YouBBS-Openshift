@@ -4,14 +4,21 @@ define('IN_SAESPOT', 1);
 include(dirname(__FILE__) . '/config.php');
 include(dirname(__FILE__) . '/common.php');
 
-if (!$cur_user || $cur_user['flag']<99) exit('error: 403 Access Denied');
+
 
 $tid = intval($_GET['tid']);
-$query = "SELECT id,cid,title,content,closecomment,visible FROM yunbbs_articles WHERE id='$tid'";
+$query  =  "SELECT  id,cid,uid,title,content,closecomment,visible  FROM  yunbbs_articles  WHERE  id='$tid'";
 $t_obj = $DBS->fetch_one_array($query);
-if(!$t_obj){
-    exit('404');
+if($t_obj){
+       if  ($cur_user  &&  (  $cur_user['id']  ==  $t_obj['uid']  ||  $cur_user['flag']>=99)  ){
+               //pass
+       }else{
+               exit('error:  403  Access  Denied');
+       }
+}else{
+       exit('404');
 }
+
 
 if($t_obj['closecomment']){
     $t_obj['closecomment'] = 'checked';
