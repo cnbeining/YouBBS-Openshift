@@ -84,7 +84,7 @@ $title = '修改帖子 - '.$t_obj['title'];
 $img_max_w = 650;
 
 
-$pagefile = dirname(__FILE__) . '/templates/default/'.$tpl.'admin-edit-post.php';
+$pagefile = dirname(__FILE__) . '/templates/default/'.$tpl.'user-edit-post.php';
 
 include(dirname(__FILE__) . '/templates/default/'.$tpl.'layout.php');
 

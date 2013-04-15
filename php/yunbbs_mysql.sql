@@ -13,6 +13,7 @@ CREATE TABLE yunbbs_articles (
   closecomment tinyint(1) NOT NULL default '0',
   favorites int(10) unsigned NOT NULL default '0',
   visible tinyint(1) NOT NULL default '1',
+  top tinyint(1) NOT NULL default '1',
   PRIMARY KEY  (id),
   KEY cid (cid),
   KEY edittime (edittime),
@@ -61,7 +62,7 @@ CREATE TABLE yunbbs_settings (
 
 
 INSERT INTO yunbbs_settings VALUES('name', 'youbbs');
-INSERT INTO yunbbs_settings VALUES('site_des', '又是一个YouBBS');
+INSERT INTO yunbbs_settings VALUES('site_des', 'YouBBS ACI字幕组修改版');
 INSERT INTO yunbbs_settings VALUES('site_create', '0');
 INSERT INTO yunbbs_settings VALUES('icp', '');
 INSERT INTO yunbbs_settings VALUES('admin_email', '');
@@ -79,7 +80,7 @@ INSERT INTO yunbbs_settings VALUES('comment_max_len', '1200');
 INSERT INTO yunbbs_settings VALUES('commentlist_num', '32');
 INSERT INTO yunbbs_settings VALUES('comment_post_space', '20');
 INSERT INTO yunbbs_settings VALUES('close', '0');
-INSERT INTO yunbbs_settings VALUES('close_note', '数据调整中');
+INSERT INTO yunbbs_settings VALUES('close_note', '服务器在睡觉，不要打搅，否则他会发飙的=_=||');
 INSERT INTO yunbbs_settings VALUES('authorized', '0');
 INSERT INTO yunbbs_settings VALUES('register_review', '0');
 INSERT INTO yunbbs_settings VALUES('close_register', '0');
